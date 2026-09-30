@@ -16,7 +16,7 @@ A premium barbershop landing page for a practice project. Built with vanilla HTM
 
 ## Features
 
-- Sticky header with logo, navbar, weather widget and mobile hamburger menu
+- Sticky header with logo, navbar, weather widget, language switch (EN/ES), user greeting and mobile hamburger menu
 - Hero with fluid typography that scales to large viewports (up to 5rem / 80px on 1600px+ screens)
 - Services masonry grid (6 cards with pricing, 12-col layout with wide/normal spans)
 - **Masonry-style haircut gallery** — 13 cards in a 12-column CSS Grid with varied spans:
@@ -25,7 +25,10 @@ A premium barbershop landing page for a practice project. Built with vanilla HTM
   - Normal cards (span 4 cols) for standard styles
   - Responsive: collapses to single column on mobile
 - FAQ accordion with toggle: single-open or multi-open mode
-- Booking form with validation, localStorage persistence and "forget me" button
+- Booking form with validation, localStorage persistence and "forget me" button — submit opens WhatsApp with the request pre-filled
+- Floating WhatsApp button with default message (language-aware)
+- Bilingual UI (EN/ES) via header toggle, persisted in localStorage (`noble-lang`)
+- Header shows "Welcome, {name}" (or "Hola, {name}") when the visitor is registered; no "Welcome back" banners
 - Scroll-reveal animations via IntersectionObserver
 - Fully responsive (mobile / tablet / desktop / large desktop)
 - `prefers-reduced-motion` support

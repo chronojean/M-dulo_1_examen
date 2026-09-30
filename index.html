@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NOBLE · Premium Barbershop in Lehi, Utah</title>
   <meta name="description" content="NOBLE is a premium barbershop in Lehi, Utah. Classic cuts, straight-razor shaves, beard styling and more. Book your appointment today.">
-  <meta name="theme-color" content="#0e0e11">
+  <meta name="theme-color" content="#1a1408">
   <meta property="og:title" content="NOBLE · Premium Barbershop in Lehi, Utah">
   <meta property="og:description" content="Classic cuts, straight-razor shaves, beard styling. Book your appointment today.">
   <meta property="og:type" content="website">
@@ -33,14 +33,16 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="#servicios">Services</a></li>
-          <li><a href="#galeria">Gallery</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#reservar" class="nav-cta">Book Now</a></li>
+          <li><a href="#servicios" data-i18n="nav.services">Services</a></li>
+          <li><a href="#galeria" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#reservar" class="nav-cta" data-i18n="nav.book">Book Now</a></li>
         </ul>
       </nav>
 
       <div class="header-right">
+        <span class="header-greeting" id="header-greeting" role="status" hidden></span>
+        <button class="lang-switch" id="lang-toggle" type="button" aria-label="Switch language / Cambiar idioma">ES</button>
         <div class="weather" id="weather" role="status" aria-label="Current weather">
           <span class="weather-icon" id="weather-icon" aria-hidden="true"></span>
           <span class="weather-temp" id="weather-temp">—</span>
@@ -60,76 +62,75 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-content">
-        <p class="hero-badge anim-fade-up">Since 2015 · 4.9★ on Google</p>
-        <h1 id="hero-title" class="hero-title anim-fade-up anim-delay-1">Premium Barbershop<br>in Lehi, Utah</h1>
-        <p class="hero-sub anim-fade-up anim-delay-2">Classic cuts, straight-razor shaves and beard styling crafted with precision. Where tradition meets modern style.</p>
+        <p class="hero-badge anim-fade-up" data-i18n="hero.badge">Since 2015 · 4.9★ on Google</p>
+        <h1 id="hero-title" class="hero-title anim-fade-up anim-delay-1" data-i18n="hero.title">Premium Barbershop<br>in Lehi, Utah</h1>
+        <p class="hero-sub anim-fade-up anim-delay-2" data-i18n="hero.sub">Classic cuts, straight-razor shaves and beard styling crafted with precision. Where tradition meets modern style.</p>
         <div class="hero-ctas anim-fade-up anim-delay-3">
-          <a href="#reservar" class="btn btn-gold">Book Now</a>
-          <a href="#servicios" class="btn btn-outline">View Services</a>
+          <a href="#reservar" class="btn btn-gold" data-i18n="hero.cta1">Book Now</a>
+          <a href="#servicios" class="btn btn-outline" data-i18n="hero.cta2">View Services</a>
         </div>
-        <p class="hero-greeting" id="hero-greeting" role="status"></p>
       </div>
     </section>
 
     <!-- SERVICES (Masonry) -->
     <section class="section" id="servicios" aria-labelledby="servicios-title">
       <div class="container">
-        <p class="section-eyebrow anim-reveal">What we do</p>
-        <h2 id="servicios-title" class="section-title anim-reveal">Services & Pricing</h2>
+        <p class="section-eyebrow anim-reveal" data-i18n="services.eyebrow">What we do</p>
+        <h2 id="servicios-title" class="section-title anim-reveal" data-i18n="services.title">Services & Pricing</h2>
         <div class="services-grid">
           <article class="card card-wide card-featured anim-reveal">
-            <span class="card-badge">Most Popular</span>
+            <span class="card-badge" data-i18n="services.popular">Most Popular</span>
             <div class="card-img card-img-3" role="img" aria-label="Cut and beard combo"></div>
             <div class="card-body">
-              <h3>Cut + Beard Noble</h3>
-              <p>Our signature package: full cut plus straight-razor beard finish. The complete NOBLE experience — precision scissor work, hot towel treatment and a clean beard line-up.</p>
+              <h3 data-i18n="services.s3t">Cut + Beard Noble</h3>
+              <p data-i18n="services.s3d">Our signature package: full cut plus straight-razor beard finish. The complete NOBLE experience — precision scissor work, hot towel treatment and a clean beard line-up.</p>
               <div class="card-meta"><span class="card-price">$48</span><span class="card-duration">75 min</span></div>
-              <a href="#reservar" class="card-link">Book this service</a>
+              <a href="#reservar" class="card-link" data-i18n="services.book">Book this service</a>
             </div>
           </article>
           <article class="card card-normal anim-reveal">
             <div class="card-img card-img-1" role="img" aria-label="Classic haircut"></div>
             <div class="card-body">
-              <h3>Classic Cut</h3>
-              <p>Precision scissor cut tailored to your face shape and style.</p>
+              <h3 data-i18n="services.s1t">Classic Cut</h3>
+              <p data-i18n="services.s1d">Precision scissor cut tailored to your face shape and style.</p>
               <div class="card-meta"><span class="card-price">$28</span><span class="card-duration">45 min</span></div>
-              <a href="#reservar" class="card-link">Book this service</a>
+              <a href="#reservar" class="card-link" data-i18n="services.book">Book this service</a>
             </div>
           </article>
           <article class="card card-normal anim-reveal">
             <div class="card-img card-img-2" role="img" aria-label="Beard trim"></div>
             <div class="card-body">
-              <h3>Beard Trim</h3>
-              <p>Shape, line-up and condition your beard for a sharp finish.</p>
+              <h3 data-i18n="services.s2t">Beard Trim</h3>
+              <p data-i18n="services.s2d">Shape, line-up and condition your beard for a sharp finish.</p>
               <div class="card-meta"><span class="card-price">$22</span><span class="card-duration">30 min</span></div>
-              <a href="#reservar" class="card-link">Book this service</a>
+              <a href="#reservar" class="card-link" data-i18n="services.book">Book this service</a>
             </div>
           </article>
           <article class="card card-normal anim-reveal">
             <div class="card-img card-img-4" role="img" aria-label="Straight razor shave"></div>
             <div class="card-body">
-              <h3>Straight-Razor Shave</h3>
-              <p>Hot towel, pre-shave oil and a clean straight-razor finish.</p>
+              <h3 data-i18n="services.s4t">Straight-Razor Shave</h3>
+              <p data-i18n="services.s4d">Hot towel, pre-shave oil and a clean straight-razor finish.</p>
               <div class="card-meta"><span class="card-price">$26</span><span class="card-duration">40 min</span></div>
-              <a href="#reservar" class="card-link">Book this service</a>
+              <a href="#reservar" class="card-link" data-i18n="services.book">Book this service</a>
             </div>
           </article>
           <article class="card card-normal anim-reveal">
             <div class="card-img card-img-5" role="img" aria-label="Hair coloring"></div>
             <div class="card-body">
-              <h3>Color & Camouflage</h3>
-              <p>Subtle grey blending or full color by our senior stylist.</p>
+              <h3 data-i18n="services.s5t">Color & Camouflage</h3>
+              <p data-i18n="services.s5d">Subtle grey blending or full color by our senior stylist.</p>
               <div class="card-meta"><span class="card-price">$38</span><span class="card-duration">50 min</span></div>
-              <a href="#reservar" class="card-link">Book this service</a>
+              <a href="#reservar" class="card-link" data-i18n="services.book">Book this service</a>
             </div>
           </article>
           <article class="card card-normal anim-reveal">
             <div class="card-img card-img-6" role="img" aria-label="Facial ritual"></div>
             <div class="card-body">
-              <h3>Facial Ritual</h3>
-              <p>Deep cleanse, exfoliation and hydration for healthy skin.</p>
+              <h3 data-i18n="services.s6t">Facial Ritual</h3>
+              <p data-i18n="services.s6d">Deep cleanse, exfoliation and hydration for healthy skin.</p>
               <div class="card-meta"><span class="card-price">$34</span><span class="card-duration">45 min</span></div>
-              <a href="#reservar" class="card-link">Book this service</a>
+              <a href="#reservar" class="card-link" data-i18n="services.book">Book this service</a>
             </div>
           </article>
         </div>
@@ -139,8 +140,8 @@
     <!-- HAIRSTYLE MASONRY GALLERY -->
     <section class="section section-alt" id="galeria" aria-labelledby="galeria-title">
       <div class="container">
-        <p class="section-eyebrow anim-reveal">Styles</p>
-        <h2 id="galeria-title" class="section-title anim-reveal">Haircut Styles</h2>
+        <p class="section-eyebrow anim-reveal" data-i18n="gallery.eyebrow">Styles</p>
+        <h2 id="galeria-title" class="section-title anim-reveal" data-i18n="gallery.title">Haircut Styles</h2>
         <div class="masonry-grid">
           <!-- Row 1: C1(wide+tall) C2 -->
           <article class="masonry-card masonry-card-wide anim-reveal">
@@ -246,13 +247,13 @@
     <!-- FAQ ACCORDION -->
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container container-narrow">
-        <p class="section-eyebrow anim-reveal">Questions</p>
-        <h2 id="faq-title" class="section-title anim-reveal">Frequently Asked Questions</h2>
+        <p class="section-eyebrow anim-reveal" data-i18n="faq.eyebrow">Questions</p>
+        <h2 id="faq-title" class="section-title anim-reveal" data-i18n="faq.title">Frequently Asked Questions</h2>
 
         <div class="faq-mode anim-reveal">
           <label class="faq-mode-label" for="faq-mode">
             <input type="checkbox" id="faq-mode">
-            <span>Allow multiple open answers</span>
+            <span data-i18n="faq.mode">Allow multiple open answers</span>
           </label>
         </div>
 
@@ -260,56 +261,56 @@
           <div class="faq-item">
             <h3>
               <button class="faq-btn" aria-expanded="true" aria-controls="faq-panel-1" id="faq-btn-1">
-                <span>What are your hours?</span>
+                <span data-i18n="faq.q1">What are your hours?</span>
                 <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
-              <p>We are open Monday through Saturday, 10:00 AM to 8:00 PM. We are closed on Sundays and major holidays.</p>
+              <p data-i18n="faq.a1">We are open Monday through Saturday, 10:00 AM to 8:00 PM. We are closed on Sundays and major holidays.</p>
             </div>
           </div>
           <div class="faq-item">
             <h3>
               <button class="faq-btn" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
-                <span>Do I need an appointment?</span>
+                <span data-i18n="faq.q2">Do I need an appointment?</span>
                 <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
-              <p>Walk-ins are welcome, but we strongly recommend booking ahead to guarantee your preferred time slot. Online booking takes less than a minute.</p>
+              <p data-i18n="faq.a2">Walk-ins are welcome, but we strongly recommend booking ahead to guarantee your preferred time slot. Online booking takes less than a minute.</p>
             </div>
           </div>
           <div class="faq-item">
             <h3>
               <button class="faq-btn" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
-                <span>What payment methods do you accept?</span>
+                <span data-i18n="faq.q3">What payment methods do you accept?</span>
                 <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3">
-              <p>We accept cash, all major credit and debit cards, Apple Pay and Google Pay. A 20% gratuity is appreciated but never required.</p>
+              <p data-i18n="faq.a3">We accept cash, all major credit and debit cards, Apple Pay and Google Pay. A 20% gratuity is appreciated but never required.</p>
             </div>
           </div>
           <div class="faq-item">
             <h3>
               <button class="faq-btn" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
-                <span>What is your cancellation policy?</span>
+                <span data-i18n="faq.q4">What is your cancellation policy?</span>
                 <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4">
-              <p>Life happens. You can reschedule or cancel free of charge up to 4 hours before your appointment. Later cancellations may incur a 50% fee.</p>
+              <p data-i18n="faq.a4">Life happens. You can reschedule or cancel free of charge up to 4 hours before your appointment. Later cancellations may incur a 50% fee.</p>
             </div>
           </div>
           <div class="faq-item">
             <h3>
               <button class="faq-btn" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
-                <span>What products do you use?</span>
+                <span data-i18n="faq.q5">What products do you use?</span>
                 <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5">
-              <p>We use premium American-made brands including Suavecito, Layrite and Baxter of California. All products are available for retail purchase in-shop.</p>
+              <p data-i18n="faq.a5">We use premium American-made brands including Suavecito, Layrite and Baxter of California. All products are available for retail purchase in-shop.</p>
             </div>
           </div>
         </div>
@@ -319,30 +320,28 @@
     <!-- RESERVATION FORM -->
     <section class="section section-alt" id="reservar" aria-labelledby="reservar-title">
       <div class="container container-narrow">
-        <p class="section-eyebrow anim-reveal">Book your visit</p>
-        <h2 id="reservar-title" class="section-title anim-reveal">Reserve Your Spot</h2>
-        <p class="form-intro anim-reveal">Register now and we will confirm your appointment by email. No spam, ever.</p>
-
-        <div class="form-greeting" id="form-greeting" role="status"></div>
+        <p class="section-eyebrow anim-reveal" data-i18n="form.eyebrow">Book your visit</p>
+        <h2 id="reservar-title" class="section-title anim-reveal" data-i18n="form.title">Reserve Your Spot</h2>
+        <p class="form-intro anim-reveal" data-i18n="form.intro">Register now and we will confirm your appointment by WhatsApp. No spam, ever.</p>
 
         <form class="booking-form anim-reveal" id="booking-form" novalidate>
           <div class="form-row">
             <div class="form-field">
-              <label for="form-name">Full name</label>
+              <label for="form-name" data-i18n="form.name">Full name</label>
               <input type="text" id="form-name" name="name" autocomplete="name" required placeholder="John Smith">
             </div>
             <div class="form-field">
-              <label for="form-email">Email</label>
+              <label for="form-email" data-i18n="form.email">Email</label>
               <input type="email" id="form-email" name="email" autocomplete="email" required placeholder="john@example.com">
             </div>
           </div>
           <div class="form-row">
             <div class="form-field">
-              <label for="form-phone">Phone <span class="form-optional">(optional)</span></label>
+              <label for="form-phone"><span data-i18n="form.phone">Phone</span> <span class="form-optional" data-i18n="form.optional">(optional)</span></label>
               <input type="tel" id="form-phone" name="phone" autocomplete="tel" placeholder="+1 (385) 555-0148">
             </div>
             <div class="form-field">
-              <label for="form-service">Service</label>
+              <label for="form-service" data-i18n="form.service">Service</label>
               <select id="form-service" name="service">
                 <option value="classic-cut">Classic Cut — $28</option>
                 <option value="beard-trim">Beard Trim — $22</option>
@@ -354,13 +353,13 @@
             </div>
           </div>
           <div class="form-field">
-            <label for="form-message">Message <span class="form-optional">(optional)</span></label>
-            <textarea id="form-message" name="message" rows="3" placeholder="Any special requests?"></textarea>
+            <label for="form-message"><span data-i18n="form.message">Message</span> <span class="form-optional" data-i18n="form.optional">(optional)</span></label>
+            <textarea id="form-message" name="message" rows="3" data-i18n-ph="form.messagePh" placeholder="Any special requests?"></textarea>
           </div>
-          <p class="form-legal">By registering you agree to receive a confirmation email. Your data is stored locally in your browser and never shared.</p>
+          <p class="form-legal" data-i18n="form.legal">By registering you agree to be contacted on WhatsApp to confirm your appointment. Your data is stored locally in your browser and never shared.</p>
           <div class="form-actions">
-            <button type="submit" class="btn btn-gold btn-lg">Confirm Reservation</button>
-            <button type="button" class="btn btn-ghost" id="forget-btn" hidden>Forget my data</button>
+            <button type="submit" class="btn btn-gold btn-lg" data-i18n="form.submit">Send via WhatsApp</button>
+            <button type="button" class="btn btn-ghost" id="forget-btn" hidden data-i18n="form.forget">Forget my data</button>
           </div>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
@@ -379,7 +378,7 @@
         <span>NOBLE</span>
       </div>
       <div class="footer-col">
-        <h3>Visit Us</h3>
+        <h3 data-i18n="footer.visit">Visit Us</h3>
         <address>
           153 N 100 E<br>
           Lehi, UT 84043<br>
@@ -387,18 +386,29 @@
         </address>
       </div>
       <div class="footer-col">
-        <h3>Hours</h3>
-        <p>Mon – Sat: 10am – 8pm<br>Sunday: Closed</p>
+        <h3 data-i18n="footer.hours">Hours</h3>
+        <p data-i18n="footer.hoursBody">Mon – Sat: 10am – 8pm<br>Sunday: Closed</p>
       </div>
       <div class="footer-col">
-        <h3>Follow</h3>
-        <p><a href="https://instagram.com" rel="noopener">Instagram</a><br><a href="https://facebook.com" rel="noopener">Facebook</a></p>
+        <h3 data-i18n="footer.follow">Follow</h3>
+        <div class="social-links">
+          <a href="https://instagram.com" rel="noopener" aria-label="Instagram" class="social-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com" rel="noopener" aria-label="Facebook" class="social-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; 2026 NOBLE Barbershop. All rights reserved.</p>
+      <p data-i18n="footer.rights">&copy; 2026 NOBLE Barbershop. All rights reserved.</p>
     </div>
   </footer>
+
+  <a class="whatsapp-float" id="whatsapp-float" href="https://wa.me/13855550148?text=Hi%20NOBLE!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
 
   <script src="js/app.js" defer></script>
 </body>
