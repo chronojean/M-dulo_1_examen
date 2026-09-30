@@ -303,18 +303,23 @@
       document.documentElement.setAttribute('lang', lang);
       try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* ignore */ }
     }
-    var toggle = document.getElementById('lang-toggle');
-    if (toggle) toggle.textContent = lang === 'en' ? 'ES' : 'EN';
+    var btnEn = document.getElementById('lang-en');
+    var btnEs = document.getElementById('lang-es');
+    if (btnEn && btnEs) {
+      var isEn = lang === 'en';
+      btnEn.classList.toggle('is-active', isEn);
+      btnEs.classList.toggle('is-active', !isEn);
+      btnEn.setAttribute('aria-pressed', String(isEn));
+      btnEs.setAttribute('aria-pressed', String(!isEn));
+    }
     updateWhatsappFloat();
     refreshGreeting();
   }
 
-  var langToggle = document.getElementById('lang-toggle');
-  if (langToggle) {
-    langToggle.addEventListener('click', function () {
-      applyLang(getLang() === 'en' ? 'es' : 'en');
-    });
-  }
+  var btnEn = document.getElementById('lang-en');
+  var btnEs = document.getElementById('lang-es');
+  if (btnEn) btnEn.addEventListener('click', function () { applyLang('en'); });
+  if (btnEs) btnEs.addEventListener('click', function () { applyLang('es'); });
 
   /* --- Booking Form + localStorage + WhatsApp --- */
   var USER_KEY = 'noble-user';
@@ -323,7 +328,7 @@
   var formStatus = document.getElementById('form-status');
   var headerGreeting = document.getElementById('header-greeting');
   var forgetBtn = document.getElementById('forget-btn');
-  var whatsappFloat = document.getElementById('whatsapp-float');
+  var whatsappFloat = document.getElementById('contact-float');
 
   function getStoredUser() {
     try {

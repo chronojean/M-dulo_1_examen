@@ -27,7 +27,7 @@ A premium barbershop landing page for a practice project. Built with vanilla HTM
 - FAQ accordion with toggle: single-open or multi-open mode
 - Booking form with validation, localStorage persistence and "forget me" button — submit opens WhatsApp with the request pre-filled
 - Floating WhatsApp button with default message (language-aware)
-- Bilingual UI (EN/ES) via header toggle, persisted in localStorage (`noble-lang`)
+- Bilingual UI via segmented EN|ES switch in header, persisted in localStorage (`noble-lang`)
 - Header shows "Welcome, {name}" (or "Hola, {name}") when the visitor is registered; no "Welcome back" banners
 - Scroll-reveal animations via IntersectionObserver
 - Fully responsive (mobile / tablet / desktop / large desktop)

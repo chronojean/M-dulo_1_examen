@@ -93,13 +93,19 @@ a:hover { color: var(--gold-soft); }
 }
 
 .lang-switch {
-  background: transparent; border: 1px solid var(--line);
-  color: var(--gold); font-weight: 700; font-size: .8rem;
+  display: inline-flex; align-items: center;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 3px; background: rgba(201, 168, 106, .08);
+}
+.lang-opt {
+  background: transparent; border: none; cursor: pointer;
+  color: var(--muted); font-weight: 700; font-size: .78rem;
   letter-spacing: .06em; padding: .45rem .8rem; border-radius: 999px;
-  cursor: pointer; min-height: 44px; min-width: 44px;
+  min-height: 44px; min-width: 48px; line-height: 1;
   transition: all var(--transition);
 }
-.lang-switch:hover { background: rgba(201, 168, 106, .15); border-color: var(--gold); }
+.lang-opt:hover { color: var(--gold); }
+.lang-opt.is-active { background: var(--gold); color: #1a1408; }
 
 .weather {
   display: flex; align-items: center; gap: .5rem;
@@ -379,7 +385,7 @@ a:hover { color: var(--gold-soft); }
 }
 
 /* --- WhatsApp Float --- */
-.whatsapp-float {
+.contact-float {
   position: fixed; right: 1.5rem; bottom: 1.5rem; z-index: 200;
   display: inline-flex; align-items: center; justify-content: center;
   width: 60px; height: 60px; border-radius: 50%;
@@ -387,7 +393,8 @@ a:hover { color: var(--gold-soft); }
   box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
   transition: transform var(--transition), box-shadow var(--transition);
 }
-.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 32px rgba(37, 211, 102, .4); color: #fff; }
+.contact-float:hover { transform: scale(1.08); box-shadow: 0 12px 32px rgba(37, 211, 102, .4); color: #fff; }
+.contact-float svg { width: 30px; height: 30px; flex-shrink: 0; }
 
 /* --- Animations --- */
 @keyframes fadeUp {
