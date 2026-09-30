@@ -24,7 +24,7 @@ A premium barbershop landing page for a practice project. Built with vanilla HTM
   - Tall cards (span 4 cols, 2 rows) for visual interest
   - Normal cards (span 4 cols) for standard styles
   - Responsive: collapses to single column on mobile
-- FAQ accordion with toggle: single-open or multi-open mode
+- FAQ accordion with toggle: single-open or multi-open mode (unified container with dividers, `max-height` collapse, open item highlighted)
 - Booking form with validation, localStorage persistence and "forget me" button — submit opens WhatsApp with the request pre-filled
 - Floating WhatsApp button with default message (language-aware)
 - Bilingual UI via segmented EN|ES switch in header, persisted in localStorage (`noble-lang`)
@@ -79,6 +79,10 @@ Row 6: [C11 4col] [C12 4col] [C13 4col]
 **Responsive behavior:**
 - ≤1024px: wide → 12col, tall → 6col, normal → 6col
 - ≤768px: all → 12col (single column stack)
+
+## Contrast (AA verified)
+
+All text pairs pass WCAG AA (4.5:1). Notable fixes: form error text uses `#ec8585` (5.11:1 on surface) and input placeholders use the muted token (9.3:1) instead of the browser default gray.
 
 ## APIs Used
 
