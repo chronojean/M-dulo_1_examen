@@ -18,7 +18,7 @@ A premium barbershop landing page for a practice project. Built with vanilla HTM
 
 - Sticky header with logo, navbar, weather widget and mobile hamburger menu
 - Hero with fluid typography that scales to large viewports (up to 5rem / 80px on 1600px+ screens)
-- Services grid (6 cards with pricing)
+- Services masonry grid (6 cards with pricing, 12-col layout with wide/normal spans)
 - **Masonry-style haircut gallery** — 13 cards in a 12-column CSS Grid with varied spans:
   - Wide cards (span 8 cols, 2 rows) for featured styles
   - Tall cards (span 4 cols, 2 rows) for visual interest
@@ -44,7 +44,20 @@ Container max-width scales from `80rem` (1280px) to `90rem` (1440px) on large sc
 
 ## Masonry Grid Layout
 
-The haircut styles gallery uses a 12-column CSS Grid with three card types:
+Both the services menu and the haircut styles gallery use a 12-column CSS Grid with varied card spans.
+
+### Services (6 cards)
+
+```
+Row 1-2: [Cut+Beard Noble wide 8col × 2row] [Classic Cut 4col]
+Row 3:   [Beard Trim 4col] [Straight-Razor 4col]
+Row 4:   [Color 4col] [Facial 4col]
+```
+
+- `.card-wide` — `grid-column: span 8; grid-row: span 2` (featured service)
+- `.card-normal` — `grid-column: span 4`
+
+### Haircut Styles Gallery (13 cards)
 
 ```
 Row 1: [C1 wide 8col × 2row] [C2 4col]

@@ -156,16 +156,18 @@ a:hover { color: var(--gold-soft); }
   font-weight: 700; margin-bottom: 3rem; color: var(--cream);
 }
 
-/* --- Services Cards --- */
-.cards-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 1.75rem;
+/* --- Services Cards (Masonry) --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
 }
 .card {
   background: var(--surface-2); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   position: relative;
+  display: flex; flex-direction: column;
 }
 .card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(0, 0, 0, .5); border-color: rgba(201, 168, 106, .4); }
 .card-featured { border-color: var(--gold); }
@@ -175,7 +177,7 @@ a:hover { color: var(--gold-soft); }
   font-weight: 700; padding: .3rem .85rem; border-radius: 999px;
   letter-spacing: .05em;
 }
-.card-img { width: 100%; aspect-ratio: 4/3; }
+.card-img { width: 100%; flex: 1; min-height: 180px; }
 .card-img-1 { background: linear-gradient(135deg, #2a2a35 0%, #1a1a22 50%, #2a2a35 100%); }
 .card-img-2 { background: linear-gradient(135deg, #1e1e28 0%, #252530 50%, #1a1a22 100%); }
 .card-img-3 { background: linear-gradient(135deg, #2a2a35 0%, #1e1e28 50%, #252530 100%); }
@@ -190,6 +192,14 @@ a:hover { color: var(--gold-soft); }
 .card-duration { font-size: .85rem; color: var(--muted); }
 .card-link { font-size: .9rem; font-weight: 600; color: var(--gold); }
 .card-link:hover { color: var(--gold-soft); }
+
+/* Services masonry spans */
+.card-wide { grid-column: span 8; grid-row: span 2; }
+.card-wide .card-img { min-height: 320px; }
+.card-tall { grid-column: span 4; grid-row: span 2; }
+.card-tall .card-img { min-height: 320px; }
+.card-normal { grid-column: span 4; }
+.card-normal .card-img { min-height: 180px; }
 
 /* --- Masonry Gallery (Haircut Styles) --- */
 .masonry-grid {
@@ -368,7 +378,6 @@ a:hover { color: var(--gold-soft); }
 @media (min-width: 1200px) {
   .hero-title { font-size: clamp(3rem, 4.5vw, 4.5rem); }
   .section { padding: 7rem 0; }
-  .cards-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (min-width: 1600px) {
@@ -379,6 +388,9 @@ a:hover { color: var(--gold-soft); }
 
 /* --- Responsive: Tablet --- */
 @media (max-width: 1024px) {
+  .card-wide { grid-column: span 12; grid-row: span 1; }
+  .card-tall { grid-column: span 6; grid-row: span 1; }
+  .card-normal { grid-column: span 6; }
   .masonry-card-wide { grid-column: span 12; grid-row: span 1; min-height: 280px; }
   .masonry-card-tall { grid-column: span 6; grid-row: span 1; min-height: 240px; }
   .masonry-card-normal { grid-column: span 6; }
@@ -404,7 +416,9 @@ a:hover { color: var(--gold-soft); }
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { width: 100%; }
   .section { padding: 4rem 0; }
-  .cards-grid { grid-template-columns: 1fr; }
+  .card-wide,
+  .card-tall,
+  .card-normal { grid-column: span 12; grid-row: span 1; }
   .masonry-card-wide,
   .masonry-card-tall,
   .masonry-card-normal { grid-column: span 12; grid-row: span 1; min-height: 220px; }
