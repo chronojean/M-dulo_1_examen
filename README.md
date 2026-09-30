@@ -17,14 +17,52 @@ A premium barbershop landing page for a practice project. Built with vanilla HTM
 ## Features
 
 - Sticky header with logo, navbar, weather widget and mobile hamburger menu
-- Hero with badge, headline, dual CTAs and personalized greeting
+- Hero with fluid typography that scales to large viewports (up to 5rem / 80px on 1600px+ screens)
 - Services grid (6 cards with pricing)
-- Gallery (6 items, lazy-loaded)
+- **Masonry-style haircut gallery** — 13 cards in a 12-column CSS Grid with varied spans:
+  - Wide cards (span 8 cols, 2 rows) for featured styles
+  - Tall cards (span 4 cols, 2 rows) for visual interest
+  - Normal cards (span 4 cols) for standard styles
+  - Responsive: collapses to single column on mobile
 - FAQ accordion with toggle: single-open or multi-open mode
 - Booking form with validation, localStorage persistence and "forget me" button
 - Scroll-reveal animations via IntersectionObserver
-- Fully responsive (mobile / desktop)
+- Fully responsive (mobile / tablet / desktop / large desktop)
 - `prefers-reduced-motion` support
+
+## Typography & Viewport Scaling
+
+The site uses `clamp()` for fluid typography that adapts to any viewport:
+
+| Element | Mobile | Desktop (1200px+) | Large (1600px+) |
+|---------|--------|-------------------|-----------------|
+| Hero title | 2.5rem | 4.5rem | 5rem |
+| Section title | 2rem | 3.5rem | 3.5rem |
+| Body text | 1rem | 1.05rem | 1.05rem |
+
+Container max-width scales from `80rem` (1280px) to `90rem` (1440px) on large screens.
+
+## Masonry Grid Layout
+
+The haircut styles gallery uses a 12-column CSS Grid with three card types:
+
+```
+Row 1: [C1 wide 8col × 2row] [C2 4col]
+Row 2: [C1 continues    ] [C3 4col]
+Row 3: [C4 4col] [C5 tall 4col × 2row] [C6 4col]
+Row 4: [C7 4col] [C5 continues         ] [C8 4col]
+Row 5: [C9 4col] [C10 wide 8col        ]
+Row 6: [C11 4col] [C12 4col] [C13 4col]
+```
+
+**CSS classes:**
+- `.masonry-card-wide` — `grid-column: span 8; grid-row: span 2; min-height: 400px`
+- `.masonry-card-tall` — `grid-column: span 4; grid-row: span 2; min-height: 400px`
+- `.masonry-card-normal` — `grid-column: span 4; min-height: 200px`
+
+**Responsive behavior:**
+- ≤1024px: wide → 12col, tall → 6col, normal → 6col
+- ≤768px: all → 12col (single column stack)
 
 ## APIs Used
 
